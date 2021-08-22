@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2021_08_22_030945) do
     t.integer "category", null: false
     t.integer "species_category"
     t.integer "quality"
+    t.boolean "contains_thc", default: true, null: false
+    t.boolean "contains_cbd", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
