@@ -1,1 +1,14 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+body {
+  font-family: 'Secular One', sans-serif;
+}
+
+.welcome-banner {
+  background-image: image-url('flower.jpeg');
+
+  div {
+    color: white;
+  }
+}
