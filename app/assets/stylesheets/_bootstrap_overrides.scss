@@ -1,0 +1,73 @@
+@import "variables";
+
+$primary: $blue-1 !default;
+$secondary: $green-1 !default;
+$success: $green-3 !default;
+$info: $blue-4 !default;
+$warning: #FFC107FF !default;
+$danger: #DC3545FF !default;
+$light: $green-6 !default;
+$dark: #343A40FF !default;
+
+.text-primary {
+  color: $black !important;
+}
+
+.text-secondary {
+  color: $green-2 !important;
+}
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.bg-secondary {
+  background-color: $grey-1 !important;
+}
+
+.btn.btn-primary {
+  color: $white !important;
+  background-color: $green-2;
+  border: 0;
+
+  &:hover {
+    background-color: $green-2;
+    color: $white !important;
+  }
+}
+
+.btn.pill {
+  border-radius: 75px;
+}
+
+.btn.btn-secondary {
+  background-color: darken($blue-4, 5%);
+  color: $white !important;
+  border: 0;
+
+  &:hover {
+    background-color: lighten($blue-4, 10%);
+    color: $white;
+  }
+}
+
+.btn.btn-outline-primary {
+  border-color: $blue-1;
+  color: $green-3;
+
+  &:hover {
+    background-color: $blue-4;
+    color: $white !important;
+  }
+}
+
+.btn.btn-outline-secondary {
+  border-color: $green-2;
+  color: $black;
+  border-width: 3px;
+
+  &:hover {
+    background-color: $blue-1;
+    color: $white !important;
+  }
+}
