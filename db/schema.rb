@@ -15,12 +15,12 @@ ActiveRecord::Schema.define(version: 2021_08_22_030945) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "product", force: :cascade do |t|
+  create_table "products", force: :cascade do |t|
     t.string "type", null: false
     t.string "name", null: false
     t.string "brand"
     t.text "description"
-    t.integer "category", null: false
+    t.integer "category"
     t.integer "species_category"
     t.integer "quality"
     t.boolean "contains_thc", default: true, null: false
