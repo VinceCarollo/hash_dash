@@ -24,6 +24,16 @@ body {
   );
 }
 
+.product-card {
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    box-shadow: 4px 4px 2px 4px $blue-1;
+  }
+}
+
+
 #hand-delivery-img {
   border-radius: 20px;
   width: 522px;

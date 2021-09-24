@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  validates :type, :name, :category
+  validate :type, :name, :category
 
   enum species_category: [:indica, :sativa, :hybrid]
 end

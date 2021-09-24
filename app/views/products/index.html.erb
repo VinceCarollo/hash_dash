@@ -1,1 +1,26 @@
-<h1>yea</h1>
+<div class="product-header text-primary text-center my-4">
+  <h1>Products</h1>
+  <h5>Choose what you would like to be delivered to you</h5>
+</div>
+
+<% @products.all.each do |product| %>
+  <div class="card product-card mb-3 w-75 mx-auto my-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <%= image_tag('flower.jpeg', class: "img-fluid rounded-start" ) %>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title"><%= product.name.capitalize %></h2>
+          <p class="card-text"><%= product.description %></p>
+          <% product.name.split(' ').map(&:capitalize).join.constantize.categories.each do |category| %>
+            <p class="my-0">
+              <small class="text-muted"><%= category.first.gsub('_', ' ').split(' ').map(&:capitalize).join(' ') %></small>
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
