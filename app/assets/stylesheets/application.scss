@@ -8,7 +8,12 @@ body {
 }
 
 .welcome-banner {
-  //background-color: $green-1 !important;
+  height: 91vh;
+  background: linear-gradient(
+                  86deg,
+                  $green-1,
+                  $green-4
+  );
 }
 
 .header-gradient {
@@ -17,4 +22,15 @@ body {
                   darken($blue-1, 5%),
                   lighten($blue-1, 5%)
   );
+}
+
+#hand-delivery-img {
+  border-radius: 20px;
+  width: 522px;
+  height: 400px;
+  display: inline-block;
+}
+
+#how-it-works-words {
+  display: inline-block;
 }
