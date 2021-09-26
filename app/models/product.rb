@@ -3,12 +3,6 @@ class Product < ApplicationRecord
 
   enum species_category: [:indica, :sativa, :hybrid]
 
-  # Creation of product disallowed
-  validate :block_save
-
-  private
-
-  def block_save
-    errors.add(:id, ': A Product must have a type')
-  end
+  has_many :product_orders
+  has_many :orders, through: :product_orders
 end
