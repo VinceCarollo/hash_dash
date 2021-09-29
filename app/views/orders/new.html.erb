@@ -1,0 +1,12 @@
+<%= turbo_frame_tag dom_id(@product) do %>
+  <div class="row g-0">
+    <div class="col-md-8">
+      <div class="card-body">
+        <h2 class="card-title"><%= @product.name.capitalize %></h2>
+        <%= form_with model: @order do |f| %>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
