@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
 
   resources :products, only: [:index]
-  resources :orders, only: [:new]
+  resources :orders, only: [:new, :create]
 end
