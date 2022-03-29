@@ -6,8 +6,6 @@ class AddProductTable < ActiveRecord::Migration[6.1]
       t.string :brand
       t.text :description
       t.integer :category
-      t.integer :species_category
-      t.integer :quality
       t.boolean :contains_thc, null: false, default: true
       t.boolean :contains_cbd, null: false, default: false
 

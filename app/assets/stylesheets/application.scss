@@ -24,17 +24,6 @@ body {
   );
 }
 
-.product-card {
-  height: 270px;
-
-  &:hover {
-    cursor: pointer;
-  }
-  &:active {
-    box-shadow: 4px 4px 2px 4px $blue-1;
-  }
-}
-
 .product-card a {
   text-decoration: none;
 }

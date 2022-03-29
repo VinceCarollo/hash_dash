@@ -6,7 +6,7 @@
 <% @products.each do |product| %>
   <div class="card product-card mb-3 w-75 mx-auto my-3">
     <%= turbo_frame_tag dom_id(product)  do %>
-      <%= link_to new_order_path(product_id: product.id), class: 'row g-0' do %>
+      <%= link_to product_path(product.id), class: 'row g-0' do %>
         <div class="col-md-4">
           <%= image_tag('flower.jpeg', class: "img-fluid rounded-start" ) %>
         </div>
