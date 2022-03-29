@@ -1,10 +1,10 @@
 <%= turbo_frame_tag dom_id(@product) do %>
   <div class="row g-0">
-    <div class="col-md-8">
+    <div class="col">
       <div class="card-body">
         <h2 class="card-title"><%= @product.name.capitalize %></h2>
         <%= form_with model: @line_item, class: "ms-5" do |f| %>
-          <div class="row justify-content-between">
+          <div class="row">
             <div class="col">
               <h4 class="text-secondary">Quality</h4>
               <div class="btn-group" role="group" aria-label="Flower Quality">
@@ -20,40 +20,49 @@
             </div>
 
             <div class="col">
-              <h4 class="text-secondary">Amount</h4>
+              <h4 class="text-secondary">Amount in grams</h4>
               <div class="btn-group" role="group" aria-label="Flower Quality">
                 <%= f.radio_button :quantity, 1, id: 'flower-qty-1', style: 'display:none;', class: 'btn-check' %>
-                <label class="btn btn-outline-primary" for="flower-qty-1">1 Gram</label>
+                <label class="btn btn-outline-primary" for="flower-qty-1">1</label>
 
                 <%= f.radio_button :quantity, 2, id: 'flower-qty-2', style: 'display:none;', class: 'btn-check' %>
-                <label class="btn btn-outline-primary" for="flower-qty-2">2 Grams</label>
+                <label class="btn btn-outline-primary" for="flower-qty-2">2</label>
 
                 <%= f.radio_button :quantity, 3.5, id: 'flower-qty-3-5', style: 'display:none;', class: 'btn-check' %>
-                <label class="btn btn-outline-primary" for="flower-qty-3-5">3.5 Grams</label>
+                <label class="btn btn-outline-primary" for="flower-qty-3-5">3.5</label>
 
                 <%= f.radio_button :quantity, 7, id: 'flower-qty-7', style: 'display:none;', class: 'btn-check' %>
-                <label class="btn btn-outline-primary" for="flower-qty-7">7 Grams</label>
+                <label class="btn btn-outline-primary" for="flower-qty-7">7</label>
+
+                <%= f.radio_button :quantity, 14, id: 'flower-qty-14', style: 'display:none;', class: 'btn-check' %>
+                <label class="btn btn-outline-primary" for="flower-qty-14">14</label>
+
+                <%= f.radio_button :quantity, 28, id: 'flower-qty-28', style: 'display:none;', class: 'btn-check' %>
+                <label class="btn btn-outline-primary" for="flower-qty-28">28</label>
               </div>
             </div>
 
             <div class="col">
               <h4 class="text-secondary">Strain Type</h4>
               <div class="btn-group" role="group" aria-label="Flower Quality">
-                <%= f.radio_button :strain_type, 1, id: 'flower-qty-1', style: 'display:none;', class: 'btn-check' %>
-                <label class="btn btn-outline-primary" for="flower-qty-1">1 Gram</label>
+                <%= f.radio_button :strain_type, :indica, id: 'flower-type-indica', style: 'display:none;', class: 'btn-check' %>
+                <label class="btn btn-outline-primary" for="flower-type-indica">Indica</label>
 
-                <%= f.radio_button :quantity, 2, id: 'flower-qty-2', style: 'display:none;', class: 'btn-check' %>
-                <label class="btn btn-outline-primary" for="flower-qty-2">2 Grams</label>
+                <%= f.radio_button :strain_type, :hybrid, id: 'flower-type-hybrid', style: 'display:none;', class: 'btn-check' %>
+                <label class="btn btn-outline-primary" for="flower-type-hybrid">Hybrid</label>
 
-                <%= f.radio_button :quantity, 3.5, id: 'flower-qty-3-5', style: 'display:none;', class: 'btn-check' %>
-                <label class="btn btn-outline-primary" for="flower-qty-3-5">3.5 Grams</label>
-
-                <%= f.radio_button :quantity, 7, id: 'flower-qty-7', style: 'display:none;', class: 'btn-check' %>
-                <label class="btn btn-outline-primary" for="flower-qty-7">7 Grams</label>
+                <%= f.radio_button :strain_type, :sativa, id: 'flower-type-sativa', style: 'display:none;', class: 'btn-check' %>
+                <label class="btn btn-outline-primary" for="flower-type-sativa">Sativa</label>
               </div>
             </div>
           </div>
-        <% end %>
+          <div class="row mt-5">
+            <div class="col">
+              <%= f.submit 'Add to Cart', class: 'btn btn-secondary me-2' %>
+              <%= link_to "Cancel", products_path, class: 'btn btn-primary' %>
+            </div>
+          </div>
+      <% end %>
       </div>
     </div>
   </div>

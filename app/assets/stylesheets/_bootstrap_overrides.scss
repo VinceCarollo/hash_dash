@@ -75,3 +75,8 @@ $dark: #343A40FF !default;
     color: $white !important;
   }
 }
+
+.btn-check:checked + .btn-outline-primary {
+  background-color: $blue-2;
+  border-color: $blue-2;
+}
